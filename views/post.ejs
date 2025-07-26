@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Anime Result</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding: 20px;
+      background: #f0f8ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <a href="/" class="btn btn-secondary mb-4">← Back</a>
+
+    <div class="card shadow-lg">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="<%= anime.image %>" class="img-fluid rounded-start" alt="<%= anime.title %>">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h3 class="card-title"><%= anime.title %></h3>
+            <p class="card-text"><strong>Synopsis:</strong> <%= anime.synopsis %></p>
+            <p><strong>Score:</strong> <%= anime.score %></p>
+            <p><strong>Status:</strong> <%= anime.status %></p>
+            <p><strong>Genres:</strong> <%= anime.genres.join(', ') %></p>
+            <p><strong>Episodes:</strong> <%= anime.episodes %></p>
+            <p><strong>Type:</strong> <%= anime.type %></p>
+            <a href="<%= anime.url %>" target="_blank" class="btn btn-success">View on MyAnimeList</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
